@@ -2,9 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
-// 导入全局样式文件
-import './styles/index.less'
-
 Vue.config.productionTip = false
 
 // 创建 Vue 根实例
