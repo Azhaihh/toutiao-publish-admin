@@ -20,9 +20,7 @@
         <el-dropdown-item>设置</el-dropdown-item>
         <!--
           注意组件默认不识别原生事件，除非内部做了处理
-          给vue组件绑定事件时候，必须加上native
-          等同于在子组件中，子组件内部处理click事件然后向外发送click事件
-        -->
+          -->
         <el-dropdown-item @click.native="onLogout">退出</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
@@ -44,12 +42,7 @@ export default {
 
     // 退出
     onLogout () {
-      // console.log('onLogout')
-      // 把用户的登录状态清除
-      window.sessionStorage.removeItem('token')
-
-      // 跳转至登录页面
-      this.$router.push('/login')
+      console.log('onLogout')
     }
   },
   computed: {

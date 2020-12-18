@@ -33,11 +33,9 @@ const router = new VueRouter({
   routes
 })
 
-// 注意：由于接口问题，，这里的功能并不完善，，仅仅适用于用户退出后再次登录
-// 如若没有退出，本地一直保存有token，，再次输入url可能将直接进入（这里需再学习sessionStorage与localStorage）
-
 // 路由导航守卫：说白了所有页面的导航都会经过这里
 // 守卫页面的导航，，即拦截页面
+
 // to：要去的路由信息
 // from：来自哪里的路由信息
 // next：放行方法
@@ -49,7 +47,7 @@ router.beforeEach((to, from, next) => {
   // next()
 
   // 登录页面设置了如果登录成功，则将token保存至客户端的sessionStorage中
-  // 这里是将储存的token值取出，用于判断
+  // 这里是将储存的token值qu'chu
   const token = window.sessionStorage.getItem('token')
 
   // 校验非登录页面的登录状态

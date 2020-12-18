@@ -45,11 +45,6 @@ export default {
     // 退出
     onLogout () {
       // console.log('onLogout')
-      // 把用户的登录状态清除
-      window.sessionStorage.removeItem('token')
-
-      // 跳转至登录页面
-      this.$router.push('/login')
     }
   },
   computed: {

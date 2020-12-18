@@ -118,9 +118,9 @@ export default {
           // 关闭登陆中 loading...
           this.loginLoading = false
 
-          // 接口问题暂不考虑使用拦截器统一设置token，，这里用于用户退出
-          // 将登录成功后的token，保存至客户端的sessionStorage中
-          window.sessionStorage.setItem('token', res.data.data.token)
+          // // 接口问题暂不考虑使用拦截器
+          // // 将登录成功后的token，保存至客户端的sessionStorage中
+          // window.sessionStorage.setItem('token', res.data.data.token)
 
           // 跳转至首页
           this.$router.push('/')
