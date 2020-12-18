@@ -46,7 +46,7 @@ export default {
     onLogout () {
       // console.log('onLogout')
       // 使用element的messageBox弹框
-      this.$confirm('确认退出吗?', '退出提示', {
+      this.$confirm('确认退出吗?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
@@ -59,7 +59,7 @@ export default {
       }).catch(() => {
         this.$message({
           type: 'info',
-          message: '已取消退出'
+          message: '已取消删除'
         })
       })
     }

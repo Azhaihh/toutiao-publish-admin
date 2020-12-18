@@ -45,23 +45,11 @@ export default {
     // 退出
     onLogout () {
       // console.log('onLogout')
-      // 使用element的messageBox弹框
-      this.$confirm('确认退出吗?', '退出提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
-      }).then(() => {
-        // 把用户的登录状态清除
-        window.sessionStorage.removeItem('token')
+      // 把用户的登录状态清除
+      window.sessionStorage.removeItem('token')
 
-        // 跳转至登录页面
-        this.$router.push('/login')
-      }).catch(() => {
-        this.$message({
-          type: 'info',
-          message: '已取消退出'
-        })
-      })
+      // 跳转至登录页面
+      this.$router.push('/login')
     }
   },
   computed: {

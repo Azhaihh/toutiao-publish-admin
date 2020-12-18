@@ -46,22 +46,26 @@ export default {
     onLogout () {
       // console.log('onLogout')
       // 使用element的messageBox弹框
-      this.$confirm('确认退出吗?', '退出提示', {
+      this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        // 把用户的登录状态清除
-        window.sessionStorage.removeItem('token')
-
-        // 跳转至登录页面
-        this.$router.push('/login')
+        this.$message({
+          type: 'success',
+          message: '删除成功!'
+        });
       }).catch(() => {
         this.$message({
           type: 'info',
-          message: '已取消退出'
+          message: '已取消删除'
         })
-      })
+      });
+      // 把用户的登录状态清除
+      window.sessionStorage.removeItem('token')
+
+      // 跳转至登录页面
+      this.$router.push('/login')
     }
   },
   computed: {

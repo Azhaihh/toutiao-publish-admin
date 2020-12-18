@@ -59,7 +59,7 @@ export default {
       }).catch(() => {
         this.$message({
           type: 'info',
-          message: '已取消退出'
+          message: '已取消删除'
         })
       })
     }
