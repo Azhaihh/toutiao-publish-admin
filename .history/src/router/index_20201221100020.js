@@ -29,7 +29,7 @@ const routes = [
       {
         path: '/article',
         name: 'article',
-        component: Article
+        
       }
     ]
   }
